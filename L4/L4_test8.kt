@@ -1,4 +1,4 @@
-//Example of Kotlin Class
+//Example of Kotlin Class 2 (constructor)
 
 fun main() {
     // var age: Int = 10
@@ -8,12 +8,12 @@ fun main() {
     // println(salary2.toInt())
 
     //sample start from here
-    var myAccount: BankAccount = BankAccount()
-    var myAccount2: BankAccount = BankAccount()
-    myAccount.accountNumber = 1111
-    myAccount.accountBalance = 8888.8
+    var myAccount: BankAccount = BankAccount(1111, 100.0)
+    var myAccount2: BankAccount = BankAccount(2222, 200.2)
+    var myAccount3: BankAccount = BankAccount(3333, 300.3)
     myAccount.printAccountDetails()
     myAccount2.printAccountDetails()
+    myAccount3.printAccountDetails()
 }
 
 class BankAccount{
@@ -25,10 +25,10 @@ class BankAccount{
     var accountNumber: Int = 0
 
     //contructor - special function to initalize the object
-    constructor(){
+    constructor(number: Int, balance: Double){
         println("contructor() is called")
-        accountBalance = 50.0
-        accountNumber = 4321
+        accountBalance = balance
+        accountNumber = number
     }
 
     // methods members
