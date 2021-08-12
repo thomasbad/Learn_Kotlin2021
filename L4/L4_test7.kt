@@ -10,18 +10,25 @@ fun main() {
     //sample start from here
     var myAccount: BankAccount = BankAccount()
     var myAccount2: BankAccount = BankAccount()
-    print("Account 1 Balance: ")
-    println(myAccount.accountBalance)
+    myAccount.accountNumber = 1111
     myAccount.accountBalance = 8888.8
-    print("Account 1 lastest Balance: ")
-    println(myAccount.accountBalance)
-    print("Account 2 lastest Balance: ")
-    println(myAccount2.accountBalance)
+    myAccount.printAccountDetails()
+    myAccount2.printAccountDetails()
 }
 
 class BankAccount{
     // properties = variables
     // methods = functions
+
+    // properties members
     var accountBalance: Double = 0.0
     var accountNumber: Int = 0
+
+    // methods members
+    fun printAccountDetails(){
+        println("============================================")
+        println("Account Number: $accountNumber")
+        println("Account Balance: $accountBalance")
+        println("============================================")
+    }
 }
