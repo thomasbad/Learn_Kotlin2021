@@ -31,7 +31,7 @@ class BankAccount{
         accountNumber = number
     }
 
-    // methods members
+    // methods members: withdraw(), deposit(), transfer()
     fun printAccountDetails(){
         println("============================================")
         println("Account Number: $accountNumber")
